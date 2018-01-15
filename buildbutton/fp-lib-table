@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name ncp1402)(type KiCad)(uri /Users/ayoy/Documents/kicad/libraries/ncp1402.pretty)(options "")(descr ""))
+)

@@ -1,0 +1,291 @@
+EESchema Schematic File Version 2
+LIBS:wipy-rescue
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:ncp1402
+LIBS:wipy-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Conn_01x02_Male J1
+U 1 1 5A0C656A
+P 1350 1450
+F 0 "J1" H 1350 1550 50  0000 C CNN
+F 1 "LiPo Battery" H 1350 1250 50  0000 C CNN
+F 2 "Connectors_JST:JST_PH_S2B-PH-SM4-TB_02x2.00mm_Angled" H 1350 1450 50  0001 C CNN
+F 3 "" H 1350 1450 50  0001 C CNN
+	1    1350 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Conn_01x02_Female J2
+U 1 1 5A0C658C
+P 3250 1450
+F 0 "J2" H 3250 1550 50  0000 C CNN
+F 1 "WiPy Power" H 3250 1250 50  0000 L CNN
+F 2 "Connectors_JST:JST_PH_S2B-PH-SM4-TB_02x2.00mm_Angled" H 3250 1450 50  0001 C CNN
+F 3 "" H 3250 1450 50  0001 C CNN
+	1    3250 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Conn_01x02_Female J3
+U 1 1 5A0C65C2
+P 3300 2050
+F 0 "J3" H 3300 2150 50  0000 C CNN
+F 1 "Sensor 5V Power" H 3300 1850 50  0000 L CNN
+F 2 "Socket_Strips:Socket_Strip_Angled_1x02_Pitch2.54mm" H 3300 2050 50  0001 C CNN
+F 3 "" H 3300 2050 50  0001 C CNN
+	1    3300 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3V8 #PWR01
+U 1 1 5A0C65F9
+P 1650 1300
+F 0 "#PWR01" H 1650 1150 50  0001 C CNN
+F 1 "+3V8" H 1650 1440 50  0000 C CNN
+F 2 "" H 1650 1300 50  0001 C CNN
+F 3 "" H 1650 1300 50  0001 C CNN
+	1    1650 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR02
+U 1 1 5A0C662B
+P 1650 1850
+F 0 "#PWR02" H 1650 1600 50  0001 C CNN
+F 1 "GND" H 1650 1700 50  0000 C CNN
+F 2 "" H 1650 1850 50  0001 C CNN
+F 3 "" H 1650 1850 50  0001 C CNN
+	1    1650 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1550 1450 1650 1450
+Wire Wire Line
+	1650 1450 1850 1450
+Wire Wire Line
+	1850 1450 1950 1450
+Wire Wire Line
+	1650 1450 1650 1300
+Connection ~ 1650 1450
+Wire Wire Line
+	1550 1550 1650 1550
+Wire Wire Line
+	1650 1550 1950 1550
+Wire Wire Line
+	1650 1550 1650 1850
+Connection ~ 1650 1550
+Wire Wire Line
+	1850 1450 1850 1250
+Wire Wire Line
+	1850 1250 2950 1250
+Wire Wire Line
+	2950 1250 2950 1450
+Wire Wire Line
+	2950 1450 3050 1450
+Connection ~ 1850 1450
+$Comp
+L GND #PWR03
+U 1 1 5A0C6831
+P 2950 1650
+F 0 "#PWR03" H 2950 1400 50  0001 C CNN
+F 1 "GND" H 2950 1500 50  0000 C CNN
+F 2 "" H 2950 1650 50  0001 C CNN
+F 3 "" H 2950 1650 50  0001 C CNN
+	1    2950 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 1650 2950 1550
+Wire Wire Line
+	2950 1550 3050 1550
+$Comp
+L +3V8 #PWR04
+U 1 1 5A0C6854
+P 4850 1650
+F 0 "#PWR04" H 4850 1500 50  0001 C CNN
+F 1 "+3V8" H 4850 1790 50  0000 C CNN
+F 2 "" H 4850 1650 50  0001 C CNN
+F 3 "" H 4850 1650 50  0001 C CNN
+	1    4850 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR05
+U 1 1 5A0C686B
+P 4950 1100
+F 0 "#PWR05" H 4950 850 50  0001 C CNN
+F 1 "GND" H 4950 950 50  0000 C CNN
+F 2 "" H 4950 1100 50  0001 C CNN
+F 3 "" H 4950 1100 50  0001 C CNN
+	1    4950 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L PWR_FLAG #FLG06
+U 1 1 5A0C6888
+P 5200 1650
+F 0 "#FLG06" H 5200 1725 50  0001 C CNN
+F 1 "PWR_FLAG" H 5200 1800 50  0000 C CNN
+F 2 "" H 5200 1650 50  0001 C CNN
+F 3 "" H 5200 1650 50  0001 C CNN
+	1    5200 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4850 1650 4850 1700
+Wire Wire Line
+	4850 1700 5200 1700
+Wire Wire Line
+	5200 1700 5200 1650
+$Comp
+L PWR_FLAG #FLG07
+U 1 1 5A0C6A28
+P 4950 1000
+F 0 "#FLG07" H 4950 1075 50  0001 C CNN
+F 1 "PWR_FLAG" H 4950 1150 50  0000 C CNN
+F 2 "" H 4950 1000 50  0001 C CNN
+F 3 "" H 4950 1000 50  0001 C CNN
+	1    4950 1000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 1000 4950 1100
+$Comp
+L Conn_01x01_Male J4
+U 1 1 5A0E0D78
+P 1350 2600
+F 0 "J4" H 1350 2700 50  0000 C CNN
+F 1 "WiPy Sensor Enable Pin" H 1350 2500 50  0000 C CNN
+F 2 "Socket_Strips:Socket_Strip_Angled_1x01_Pitch2.54mm" H 1350 2600 50  0001 C CNN
+F 3 "" H 1350 2600 50  0001 C CNN
+	1    1350 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L IRF540N Q1
+U 1 1 5A0E0DB0
+P 2450 2600
+F 0 "Q1" H 2700 2675 50  0000 L CNN
+F 1 "IRLR2905" H 2700 2600 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:TO-252-2" H 2700 2525 50  0001 L CIN
+F 3 "" H 2450 2600 50  0001 L CNN
+	1    2450 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R1
+U 1 1 5A0E0E26
+P 1900 2600
+F 0 "R1" V 1980 2600 50  0000 C CNN
+F 1 "R" V 1900 2600 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206" V 1830 2600 50  0001 C CNN
+F 3 "" H 1900 2600 50  0001 C CNN
+	1    1900 2600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1550 2600 1750 2600
+Wire Wire Line
+	2050 2600 2250 2600
+$Comp
+L D D1
+U 1 1 5A0E0EBF
+P 2550 2100
+F 0 "D1" H 2550 2200 50  0000 C CNN
+F 1 "D" H 2550 2000 50  0000 C CNN
+F 2 "Diodes_SMD:D_SMA" H 2550 2100 50  0001 C CNN
+F 3 "" H 2550 2100 50  0001 C CNN
+	1    2550 2100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2550 2800 2550 2900
+$Comp
+L GND #PWR08
+U 1 1 5A0E10E7
+P 2550 2900
+F 0 "#PWR08" H 2550 2650 50  0001 C CNN
+F 1 "GND" H 2550 2750 50  0000 C CNN
+F 2 "" H 2550 2900 50  0001 C CNN
+F 3 "" H 2550 2900 50  0001 C CNN
+	1    2550 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 2250 2550 2300
+Wire Wire Line
+	2550 2300 2550 2400
+Wire Wire Line
+	1950 1650 1950 1900
+Wire Wire Line
+	1950 1900 2550 1900
+Wire Wire Line
+	2550 1900 2900 1900
+Wire Wire Line
+	2550 1900 2550 1950
+Wire Wire Line
+	2900 1900 2900 2050
+Wire Wire Line
+	2900 2050 3100 2050
+Connection ~ 2550 1900
+Wire Wire Line
+	2550 2300 2900 2300
+Wire Wire Line
+	2900 2300 2900 2150
+Wire Wire Line
+	2900 2150 3100 2150
+Connection ~ 2550 2300
+$Comp
+L NCP1402 U1
+U 1 1 5A0E19DF
+P 2250 1550
+F 0 "U1" H 2550 1700 60  0000 C CNN
+F 1 "NCP1402" H 2700 1600 60  0000 C CNN
+F 2 "ncp1402:NCP1402" H 2500 1950 60  0001 C CNN
+F 3 "" H 2500 1950 60  0001 C CNN
+	1    2250 1550
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
