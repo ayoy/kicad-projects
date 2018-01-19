@@ -1,0 +1,5 @@
+(fp_lib_table
+  (lib (name ncp1402)(type KiCad)(uri /Users/ayoy/Documents/kicad/libraries/ncp1402.pretty)(options "")(descr ""))
+  (lib (name buildbutton2)(type KiCad)(uri /Users/ayoy/Documents/kicad/buildbutton2/buildbutton2.pretty)(options "")(descr ""))
+  (lib (name pololu)(type KiCad)(uri /Users/ayoy/Documents/kicad/libraries/pololu.pretty)(options "")(descr ""))
+)
