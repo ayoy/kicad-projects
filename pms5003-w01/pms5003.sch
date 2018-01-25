@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:pms5003-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -184,7 +185,7 @@ Text GLabel 2500 1950 2    60   Input ~ 0
 Text GLabel 4700 1200 2    60   Input ~ 0
 3V3
 Text GLabel 5850 3650 0    60   Input ~ 0
-3V3
+SHT_RTC_VCC
 $Comp
 L GND #PWR03
 U 1 1 5A6216BF
@@ -230,7 +231,7 @@ F 3 "" H 700 4550 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 Text GLabel 1150 2650 2    60   Input ~ 0
-3V3
+SHT_RTC_VCC
 $Comp
 L GND #PWR07
 U 1 1 5A621BA2
@@ -258,8 +259,8 @@ Text GLabel 4700 1650 2    60   Input ~ 0
 RTC_SDA
 Text GLabel 4700 1800 2    60   Input ~ 0
 RTC_SCL
-Text GLabel 4700 1950 2    60   Input ~ 0
-PMS_EN
+Text GLabel 4900 1950 2    60   Input ~ 0
+SHT_RTC_VCC
 $Comp
 L PWR_FLAG #FLG08
 U 1 1 5A622B86
@@ -535,7 +536,7 @@ F 3 "" H 4450 6200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L USB_OTG J7
+L USB_OTG-RESCUE-pms5003 J7
 U 1 1 5A6513FA
 P 1400 5350
 F 0 "J7" H 1200 5800 50  0000 L CNN
@@ -559,7 +560,6 @@ NoConn ~ 1700 5350
 NoConn ~ 1700 5450
 NoConn ~ 1700 5550
 NoConn ~ 1300 5750
-NoConn ~ 3100 1800
 Text GLabel 6250 1000 0    60   Input ~ 0
 VBATT+
 $Comp
@@ -718,6 +718,77 @@ F 9 "Value" H 3550 3650 60  0001 C CNN "2nd Distrib Link"
 	1    3550 3650
 	0    1    1    0   
 $EndComp
+$Comp
+L SW_Push SW1
+U 1 1 5A67AAEA
+P 1000 4150
+F 0 "SW1" H 1050 4250 50  0000 L CNN
+F 1 "SW_Push" H 1000 4090 50  0000 C CNN
+F 2 "Buttons_Switches_SMD:SW_SPST_B3S-1000" H 1000 4350 50  0001 C CNN
+F 3 "" H 1000 4350 50  0001 C CNN
+F 4 "Value" H 1000 4150 60  0001 C CNN "MFG Name"
+F 5 "Value" H 1000 4150 60  0001 C CNN "MFG Part Num"
+F 6 "Value" H 1000 4150 60  0001 C CNN "1st Distrib PN"
+F 7 "Value" H 1000 4150 60  0001 C CNN "1st Distrib Link"
+F 8 "Value" H 1000 4150 60  0001 C CNN "2nd Distrib PN"
+F 9 "Value" H 1000 4150 60  0001 C CNN "2nd Distrib Link"
+	1    1000 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C7
+U 1 1 5A68ADE0
+P 1000 4400
+F 0 "C7" H 1025 4500 50  0000 L CNN
+F 1 "1nF" H 1025 4300 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 1038 4250 50  0001 C CNN
+F 3 "" H 1000 4400 50  0001 C CNN
+F 4 "Value" H 1000 4400 60  0001 C CNN "MFG Name"
+F 5 "Value" H 1000 4400 60  0001 C CNN "MFG Part Num"
+F 6 "Value" H 1000 4400 60  0001 C CNN "1st Distrib PN"
+F 7 "Value" H 1000 4400 60  0001 C CNN "1st Distrib Link"
+F 8 "Value" H 1000 4400 60  0001 C CNN "2nd Distrib PN"
+F 9 "Value" H 1000 4400 60  0001 C CNN "2nd Distrib Link"
+	1    1000 4400
+	0    1    1    0   
+$EndComp
+Text GLabel 1550 4150 2    60   Input ~ 0
+RST
+Text GLabel 2950 1050 0    60   Input ~ 0
+RST
+$Comp
+L GND #PWR016
+U 1 1 5A68B70D
+P 2700 750
+F 0 "#PWR016" H 2700 500 50  0001 C CNN
+F 1 "GND" H 2700 600 50  0000 C CNN
+F 2 "" H 2700 750 50  0001 C CNN
+F 3 "" H 2700 750 50  0001 C CNN
+	1    2700 750 
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R7
+U 1 1 5A68BEEE
+P 1350 3900
+F 0 "R7" V 1430 3900 50  0000 C CNN
+F 1 "10k" V 1350 3900 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206" V 1280 3900 50  0001 C CNN
+F 3 "" H 1350 3900 50  0001 C CNN
+F 4 "Value" H 1350 3900 60  0001 C CNN "MFG Name"
+F 5 "Value" H 1350 3900 60  0001 C CNN "MFG Part Num"
+F 6 "Value" H 1350 3900 60  0001 C CNN "1st Distrib PN"
+F 7 "Value" H 1350 3900 60  0001 C CNN "1st Distrib Link"
+F 8 "Value" H 1350 3900 60  0001 C CNN "2nd Distrib PN"
+F 9 "Value" H 1350 3900 60  0001 C CNN "2nd Distrib Link"
+	1    1350 3900
+	1    0    0    -1  
+$EndComp
+Text GLabel 1300 3650 0    60   Input ~ 0
+3V3
+NoConn ~ 4500 1050
+Text GLabel 2950 1800 0    60   Input ~ 0
+PMS_EN
 Wire Wire Line
 	3700 3650 3800 3650
 Wire Wire Line
@@ -887,7 +958,7 @@ Wire Wire Line
 Wire Wire Line
 	4250 3550 3900 3550
 Wire Wire Line
-	4700 1950 4500 1950
+	4500 1950 4900 1950
 Wire Wire Line
 	2950 1200 3100 1200
 Wire Wire Line
@@ -1034,46 +1105,12 @@ Wire Wire Line
 	3550 4450 3600 4450
 Wire Wire Line
 	3200 4450 3250 4450
-$Comp
-L SW_Push SW1
-U 1 1 5A67AAEA
-P 1000 4150
-F 0 "SW1" H 1050 4250 50  0000 L CNN
-F 1 "SW_Push" H 1000 4090 50  0000 C CNN
-F 2 "Buttons_Switches_SMD:SW_SPST_B3S-1000" H 1000 4350 50  0001 C CNN
-F 3 "" H 1000 4350 50  0001 C CNN
-F 4 "Value" H 1000 4150 60  0001 C CNN "MFG Name"
-F 5 "Value" H 1000 4150 60  0001 C CNN "MFG Part Num"
-F 6 "Value" H 1000 4150 60  0001 C CNN "1st Distrib PN"
-F 7 "Value" H 1000 4150 60  0001 C CNN "1st Distrib Link"
-F 8 "Value" H 1000 4150 60  0001 C CNN "2nd Distrib PN"
-F 9 "Value" H 1000 4150 60  0001 C CNN "2nd Distrib Link"
-	1    1000 4150
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	1200 4150 1550 4150
 Wire Wire Line
 	800  4150 700  4150
 Wire Wire Line
 	700  4150 700  4550
-$Comp
-L C C7
-U 1 1 5A68ADE0
-P 1000 4400
-F 0 "C7" H 1025 4500 50  0000 L CNN
-F 1 "1nF" H 1025 4300 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805" H 1038 4250 50  0001 C CNN
-F 3 "" H 1000 4400 50  0001 C CNN
-F 4 "Value" H 1000 4400 60  0001 C CNN "MFG Name"
-F 5 "Value" H 1000 4400 60  0001 C CNN "MFG Part Num"
-F 6 "Value" H 1000 4400 60  0001 C CNN "1st Distrib PN"
-F 7 "Value" H 1000 4400 60  0001 C CNN "1st Distrib Link"
-F 8 "Value" H 1000 4400 60  0001 C CNN "2nd Distrib PN"
-F 9 "Value" H 1000 4400 60  0001 C CNN "2nd Distrib Link"
-	1    1000 4400
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	700  4400 850  4400
 Connection ~ 700  4400
@@ -1082,10 +1119,6 @@ Wire Wire Line
 Wire Wire Line
 	1350 4050 1350 4400
 Connection ~ 1350 4150
-Text GLabel 1550 4150 2    60   Input ~ 0
-RST
-Text GLabel 2950 1050 0    60   Input ~ 0
-RST
 Wire Wire Line
 	2950 1050 3100 1050
 Wire Wire Line
@@ -1096,38 +1129,30 @@ Wire Wire Line
 	2950 700  2700 700 
 Wire Wire Line
 	2700 700  2700 750 
-$Comp
-L GND #PWR016
-U 1 1 5A68B70D
-P 2700 750
-F 0 "#PWR016" H 2700 500 50  0001 C CNN
-F 1 "GND" H 2700 600 50  0000 C CNN
-F 2 "" H 2700 750 50  0001 C CNN
-F 3 "" H 2700 750 50  0001 C CNN
-	1    2700 750 
-	1    0    0    -1  
-$EndComp
-$Comp
-L R R7
-U 1 1 5A68BEEE
-P 1350 3900
-F 0 "R7" V 1430 3900 50  0000 C CNN
-F 1 "10k" V 1350 3900 50  0000 C CNN
-F 2 "Resistors_SMD:R_1206" V 1280 3900 50  0001 C CNN
-F 3 "" H 1350 3900 50  0001 C CNN
-F 4 "Value" H 1350 3900 60  0001 C CNN "MFG Name"
-F 5 "Value" H 1350 3900 60  0001 C CNN "MFG Part Num"
-F 6 "Value" H 1350 3900 60  0001 C CNN "1st Distrib PN"
-F 7 "Value" H 1350 3900 60  0001 C CNN "1st Distrib Link"
-F 8 "Value" H 1350 3900 60  0001 C CNN "2nd Distrib PN"
-F 9 "Value" H 1350 3900 60  0001 C CNN "2nd Distrib Link"
-	1    1350 3900
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	1350 3750 1350 3650
-Text GLabel 1300 3650 0    60   Input ~ 0
-3V3
 Wire Wire Line
 	1350 3650 1300 3650
+Wire Wire Line
+	2950 1800 3100 1800
+Text GLabel 5200 2100 2    60   Input ~ 0
+3V3
+$Comp
+L R R?
+U 1 1 5A6A7E1C
+P 4900 2100
+F 0 "R?" V 4980 2100 50  0000 C CNN
+F 1 "100" V 4900 2100 50  0000 C CNN
+F 2 "" V 4830 2100 50  0001 C CNN
+F 3 "" H 4900 2100 50  0001 C CNN
+	1    4900 2100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4600 1950 4600 2100
+Wire Wire Line
+	4600 2100 4750 2100
+Connection ~ 4600 1950
+Wire Wire Line
+	5050 2100 5200 2100
 $EndSCHEMATC
