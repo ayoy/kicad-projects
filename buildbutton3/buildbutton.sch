@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:buildbutton-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -28,9 +29,9 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:pololu
-LIBS:ncp1402
 LIBS:dominik
+LIBS:ncp1402
+LIBS:pololu
 LIBS:buildbutton-cache
 EELAYER 25 0
 EELAYER END
@@ -113,7 +114,7 @@ F 3 "" H 2600 3900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L U3V12F9 U2
+L U3V12F9-RESCUE-buildbutton U2
 U 1 1 5A4D6211
 P 4100 2800
 F 0 "U2" H 4400 2950 60  0000 C CNN
