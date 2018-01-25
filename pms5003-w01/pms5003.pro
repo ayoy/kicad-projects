@@ -1,4 +1,4 @@
-update=2018 January 19, Friday 14:21:51
+update=2018 January 23, Tuesday 21:23:19
 version=1
 last_client=kicad
 [pcbnew]
@@ -61,3 +61,4 @@ LibName29=valves
 LibName30=pycom
 LibName31=pololu
 LibName32=dominik
+LibName33=switches
