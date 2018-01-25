@@ -129,8 +129,14 @@ U 1 1 5A620243
 P 1150 3450
 F 0 "J2" H 1150 3750 50  0000 C CNN
 F 1 "DS3231" H 1150 3150 50  0000 C CNN
-F 2 "Socket_Strips:Socket_Strip_Straight_1x05_Pitch2.54mm" H 1150 3450 50  0001 C CNN
+F 2 "various:DS3231" H 1150 3450 50  0001 C CNN
 F 3 "" H 1150 3450 50  0001 C CNN
+F 4 "Value" H 1150 3450 60  0001 C CNN "MFG Name"
+F 5 "Value" H 1150 3450 60  0001 C CNN "MFG Part Num"
+F 6 "Value" H 1150 3450 60  0001 C CNN "1st Distrib PN"
+F 7 "Value" H 1150 3450 60  0001 C CNN "1st Distrib Link"
+F 8 "Value" H 1150 3450 60  0001 C CNN "2nd Distrib PN"
+F 9 "Value" H 1150 3450 60  0001 C CNN "2nd Distrib Link"
 	1    1150 3450
 	1    0    0    -1  
 $EndComp
@@ -173,8 +179,6 @@ Text GLabel 3750 4150 0    60   Input ~ 0
 5V
 Text GLabel 2050 1950 2    60   Input ~ 0
 5V
-Text GLabel 4500 1350 2    60   Input ~ 0
-3V3
 Text GLabel 5600 3650 0    60   Input ~ 0
 SHT_RTC_VCC
 $Comp
@@ -271,8 +275,6 @@ Wire Wire Line
 Wire Wire Line
 	2000 1950 2050 1950
 Wire Wire Line
-	4500 1350 4300 1350
-Wire Wire Line
 	5750 3550 5700 3550
 Wire Wire Line
 	5500 3100 5500 3050
@@ -340,9 +342,9 @@ Wire Wire Line
 Wire Wire Line
 	5650 3450 5750 3450
 Text GLabel 4500 1500 2    60   Input ~ 0
-SHT10_SCK
-Text GLabel 4500 1650 2    60   Input ~ 0
 SHT10_DATA
+Text GLabel 4500 1650 2    60   Input ~ 0
+SHT10_SCK
 Wire Wire Line
 	4500 1500 4300 1500
 Wire Wire Line
@@ -747,8 +749,14 @@ U 1 1 5A64E9C0
 P 5700 5450
 F 0 "D3" H 5700 5550 50  0000 C CNN
 F 1 "D_Schottky" H 5700 5350 50  0000 C CNN
-F 2 "Diodes_SMD:D_SMA" H 5700 5450 50  0001 C CNN
+F 2 "Diodes_SMD:D_SMB" H 5700 5450 50  0001 C CNN
 F 3 "" H 5700 5450 50  0001 C CNN
+F 4 "Value" H 5700 5450 60  0001 C CNN "MFG Name"
+F 5 "Value" H 5700 5450 60  0001 C CNN "MFG Part Num"
+F 6 "Value" H 5700 5450 60  0001 C CNN "1st Distrib PN"
+F 7 "Value" H 5700 5450 60  0001 C CNN "1st Distrib Link"
+F 8 "Value" H 5700 5450 60  0001 C CNN "2nd Distrib PN"
+F 9 "Value" H 5700 5450 60  0001 C CNN "2nd Distrib Link"
 	1    5700 5450
 	0    -1   -1   0   
 $EndComp
@@ -813,8 +821,14 @@ U 1 1 5A6513FA
 P 950 5350
 F 0 "J7" H 750 5800 50  0000 L CNN
 F 1 "USB_OTG" H 750 5700 50  0000 L CNN
-F 2 "Connectors:USB_Micro-B" H 1100 5300 50  0001 C CNN
+F 2 "various:USB_Micro-B_91-US01-517" H 1100 5300 50  0001 C CNN
 F 3 "" H 1100 5300 50  0001 C CNN
+F 4 "Value" H 950 5350 60  0001 C CNN "MFG Name"
+F 5 "Value" H 950 5350 60  0001 C CNN "MFG Part Num"
+F 6 "Value" H 950 5350 60  0001 C CNN "1st Distrib PN"
+F 7 "Value" H 950 5350 60  0001 C CNN "1st Distrib Link"
+F 8 "Value" H 950 5350 60  0001 C CNN "2nd Distrib PN"
+F 9 "Value" H 950 5350 60  0001 C CNN "2nd Distrib Link"
 	1    950  5350
 	1    0    0    -1  
 $EndComp
@@ -853,4 +867,5 @@ Text GLabel 2500 1800 0    60   Input ~ 0
 SHT_RTC_VCC
 Wire Wire Line
 	2650 1800 2500 1800
+NoConn ~ 4300 1350
 $EndSCHEMATC
