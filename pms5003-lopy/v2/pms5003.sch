@@ -29,7 +29,6 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:pycom
 LIBS:pololu
 LIBS:dominik
 LIBS:pms5003-cache
@@ -890,7 +889,7 @@ MOSI
 Text GLabel 6100 2350 0    60   Input ~ 0
 CLK
 Text GLabel 6100 2500 0    60   Input ~ 0
-3V3
+GND
 Text GLabel 6100 2650 0    60   Input ~ 0
 DC
 Text GLabel 6100 2800 0    60   Input ~ 0
