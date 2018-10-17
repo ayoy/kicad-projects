@@ -1,4 +1,4 @@
-update=2018 January 25, Thursday 20:55:45
+update=2018 June 15, Friday 09:29:32
 version=1
 last_client=kicad
 [pcbnew]
@@ -62,3 +62,13 @@ LibName30=valves
 LibName31=pycom
 LibName32=pololu
 LibName33=dominik
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60

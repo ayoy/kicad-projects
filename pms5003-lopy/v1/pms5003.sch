@@ -29,9 +29,6 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:pycom
-LIBS:pololu
-LIBS:dominik
 LIBS:pms5003-cache
 EELAYER 25 0
 EELAYER END
@@ -817,7 +814,7 @@ F 3 "" H 4000 6200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L USB_OTG J7
+L USB_OTG-RESCUE-pms5003 J7
 U 1 1 5A6513FA
 P 950 5350
 F 0 "J7" H 750 5800 50  0000 L CNN
